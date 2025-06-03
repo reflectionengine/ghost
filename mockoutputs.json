@@ -1,0 +1,21 @@
+diff --git a//dev/null b/data/mock_outputs.json
+index 0000000000000000000000000000000000000000..bdb0100fcc7974cbc3803b97b05410ff53d7b76c 100644
+--- a//dev/null
++++ b/data/mock_outputs.json
+@@ -0,0 +1,16 @@
++{
++  "scores": {
++    "foresight_health": {"score": 75, "text": "Simulation indicates moderate predictive consistency."},
++    "culture_resilience": {"score": 60, "text": "Culture remains adaptive but shows weak points."},
++    "narrative_alignment": {"score": 82, "text": "Narratives align closely with user goals."}
++  },
++  "red_flags": [
++    {"severity": "High", "tag": "\u26a0\ufe0f Incentive Misalignment: Sales pressure overrides customer consent"},
++    {"severity": "Medium", "tag": "\u26a0\ufe0f Data retention without explicit consent"},
++    {"severity": "Low", "tag": "\u26a0\ufe0f Minor discrepancy in user logs"}
++  ],
++  "simulation_log": [
++    {"timestamp": "2024-01-01 10:00:00", "prompt": "System: Start sandbox simulation", "response": "User initiated scenario A"},
++    {"timestamp": "2024-01-01 10:05:00", "prompt": "Reflection: Analyze policy conflicts", "response": "User flagged potential oversight"}
++  ]
++}
