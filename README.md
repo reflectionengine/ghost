@@ -54,7 +54,7 @@ ghost-protocol-dashboard/
 
 ## License
 
-MIT License (or adjust as needed).
+MIT License.
 
 ## Disclaimer
 
