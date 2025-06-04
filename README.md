@@ -18,7 +18,7 @@ Ghost Protocol Dashboard is a foresight and contradiction surfacing dashboard bu
 ## Intended Use Cases
 
 - Internal ethics auditing in large enterprises.
-- Governance failure scenario testing (e.g. banking, healthcare, defense).
+- Governance failure scenario testing.
 - Preemptive culture and compliance risk mapping.
 - Leadership behavior simulation during high‑pressure cycles.
 - Corporate contradiction mapping (stated values vs. incentive design).
