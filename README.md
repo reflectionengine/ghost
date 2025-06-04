@@ -34,11 +34,30 @@ streamlit run dashboard.py
 
 ```plaintext
 ghost-protocol-dashboard/
-├── dashboard.py              # Streamlit/Flask app
+├── app/
+│   ├── __init__.py
+│   ├── dashboard.py          # Main UI (Streamlit or Flask)
+│   └── logic.py              # Backend logic / RAG orchestration
+│
 ├── data/
-│   └── mock_outputs.json     # Simulated outputs and contradictions
-├── README.md                 # Project documentation
-├── requirements.txt          # Python dependencies
+│   ├── mock_outputs.json     # Static simulated results
+│   ├── example_docs/         # (Optional) Sample text chunks for RAG prototypes
+│   └── config.yaml           # (Optional) Thresholds, weights, settings
+│
+├── prompts/
+│   ├── mirror_mode.txt       # Core reflection prompt
+│   ├── rag_query.txt         # Prompt template for RAG synthesis
+│   └── foresight_eval.txt    # (Optional) Score calibration prompt
+│
+├── utils/
+│   ├── io.py                 # JSON / YAML loader, mock data functions
+│   └── scorers.py            # (Optional) Foresight, risk, or alignment scorers
+│
+├── tests/
+│   └── test_logic.py         # Unit tests for backend functions
+│
+├── README.md                 # Project summary and usage
+├── requirements.txt          # Python deps (llama-index, langchain, etc)
 └── .gitignore
 ```
 
