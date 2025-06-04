@@ -1,61 +1,32 @@
 # ghost
-Foresight protocol / 2016 Case study ( you know who )
-# Ghost Protocol Dashboard
 
-## Project Description
+## Minimal RAG Example
 
-Ghost Protocol Dashboard is a foresight and contradiction surfacing dashboard built for leadership, ethics, and governance testing in high‑risk organizational environments. It acts as an audit mirror for executive behavior, incentive structures, and misalignment between corporate narrative and operational reality. The dashboard integrates with the Ghost Protocol Reflection Engine and accepts JSON or flat file outputs from sandbox simulations.
+This repository includes a tiny retrieval‑augmented generation (RAG) demo built with Flask. Documents located in `docs/` are loaded into a simple vector store on startup. The user can upload additional markdown or text files, query the collection, and receive a synthetic "Risk Reflection" report.
 
-## Key Features (WIP)
+### Features
+- Upload and parse markdown/text documents
+- Simple vector store using token overlap
+- Prompt input field and optional *Reflection Mode*
+- Retrieval logic that surfaces relevant document chunks
+- Mocked report generation summarizing content, risks, strategy, and contradiction notes
 
-- **Score Panel** for tracking Foresight Health, Culture Resilience, and Narrative Alignment.
-- **Red Flag Summary** that highlights contradictions such as incentive misalignment or ethical drift.
-- **Sandbox Simulation Log** showing reflective prompts and interaction history.
-- Designed for integration with the Ghost Protocol Reflection Engine.
-- Works with JSON or plain text outputs from sandbox simulations.
-- Useful for internal audits, leadership reflection, and governance prototyping.
+### Setup
+1. Install dependencies
+   ```bash
+   pip install flask
+   ```
+2. Run the server
+   ```bash
+   python app.py
+   ```
+3. Open `http://localhost:5000` in your browser to test.
 
-## Intended Use Cases
+### Files
+- `app.py` – basic Flask server
+- `rag_logic.py` – retrieval and report generation logic
+- `templates/index.html` – minimal HTML interface
+- `docs/` – sample internal markdown documents
 
-- Internal ethics auditing in large enterprises.
-- Governance failure scenario testing.
-- Preemptive culture and compliance risk mapping.
-- Leadership behavior simulation during high‑pressure cycles.
-- Corporate contradiction mapping (stated values vs. incentive design).
-
-## Installation
-
-```bash
-pip install -r requirements.txt
-streamlit run dashboard.py
-```
-
-## Project Structure
-
-```plaintext
-ghost-protocol-dashboard/
-├── dashboard.py              # Streamlit/Flask app
-├── data/
-│   └── mock_outputs.json     # Simulated outputs and contradictions
-├── README.md                 # Project documentation
-├── requirements.txt          # Python dependencies
-└── .gitignore
-```
-
-## Example Contradictions Surfaced
-
-```json
-{
-  "tag": "\u26a0\ufe0f Incentive Misalignment",
-  "insight": "Sales bonuses tied to account quantity directly contradict stated 'Customer-First' value.",
-  "reflection_prompt": "Who gets rewarded if the system fails ethically but hits targets?"
-}
-```
-
-## License
-
-MIT License.
-
-## Disclaimer
-
-This tool is intended for experimental and educational use in ethics-driven leadership tooling and governance reflection simulations. It does not constitute legal or compliance advice.
+### RAG Concept
+Retrieval‑augmented generation combines a search component with a language model. Queries first retrieve relevant text passages from a knowledge base. Those passages are then used to generate a response, providing fresher and more grounded answers than a model alone. This demo mocks the generation step but illustrates the flow of uploading, embedding, retrieving, and summarizing documents.

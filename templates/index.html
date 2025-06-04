@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RAG Dashboard</title>
+</head>
+<body>
+    <h1>Risk Reflection</h1>
+    <form method="post" enctype="multipart/form-data">
+        <textarea name="query" rows="4" cols="50" placeholder="Enter your prompt"></textarea><br>
+        <label><input type="checkbox" name="reflection"> Reflection Mode</label><br>
+        <button type="submit">Query</button>
+    </form>
+    <hr>
+    <form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
+        <input type="file" name="document">
+        <button type="submit">Upload Document</button>
+    </form>
+    {% if report %}
+        <h2>Summary</h2>
+        <p>{{ report.summary }}</p>
+        <h3>Risks Detected</h3>
+        <p>{{ report.risks }}</p>
+        <h3>Strategy Suggestions</h3>
+        <p>{{ report.strategy }}</p>
+        <h3>Contradiction Notes</h3>
+        <p>{{ report.contradiction }}</p>
+    {% endif %}
+</body>
+</html>
