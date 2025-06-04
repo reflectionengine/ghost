@@ -6,7 +6,7 @@ Foresight protocol / 2016 Case study ( you know who )
 
 Ghost Protocol Dashboard is a foresight and contradiction surfacing dashboard built for leadership, ethics, and governance testing in high‑risk organizational environments. It acts as an audit mirror for executive behavior, incentive structures, and misalignment between corporate narrative and operational reality. The dashboard integrates with the Ghost Protocol Reflection Engine and accepts JSON or flat file outputs from sandbox simulations.
 
-## Key Features
+## Key Features (WIP)
 
 - **Score Panel** for tracking Foresight Health, Culture Resilience, and Narrative Alignment.
 - **Red Flag Summary** that highlights contradictions such as incentive misalignment or ethical drift.
@@ -15,7 +15,7 @@ Ghost Protocol Dashboard is a foresight and contradiction surfacing dashboard bu
 - Works with JSON or plain text outputs from sandbox simulations.
 - Useful for internal audits, leadership reflection, and governance prototyping.
 
-## Use Cases
+## Intended Use Cases
 
 - Internal ethics auditing in large enterprises.
 - Governance failure scenario testing (e.g. banking, healthcare, defense).
