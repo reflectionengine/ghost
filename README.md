@@ -35,7 +35,6 @@ streamlit run dashboard.py
 ```plaintext
 ghost-protocol-dashboard/
 ├── app/
-│   ├── __init__.py
 │   ├── dashboard.py          # Main UI (Streamlit or Flask)
 │   └── logic.py              # Backend logic / RAG orchestration
 │
@@ -44,8 +43,8 @@ ghost-protocol-dashboard/
 │   ├── example_docs/         # (Optional) Sample text chunks for RAG prototypes
 │   └── config.yaml           # (Optional) Thresholds, weights, settings
 │
-├── prompts/
-│   ├── mirror_mode.txt       # Core reflection prompt
+├── prompts/(TBR)
+│   ├── ghos_mode.txt       # Core reflection prompt
 │   ├── rag_query.txt         # Prompt template for RAG synthesis
 │   └── foresight_eval.txt    # (Optional) Score calibration prompt
 │
